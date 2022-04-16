@@ -7,6 +7,7 @@ import 'package:tv/presentation/bloc/tv_watchlist/tv_watchlist_bloc.dart';
 import 'package:tv/presentation/bloc/tv_detail/tv_detail_bloc.dart';
 import 'package:tv/presentation/bloc/tv_recommendation/tv_recommendation_bloc.dart';
 import 'package:tv/presentation/pages/tv_detail_page.dart';
+import 'package:mockito/annotations.dart';
 
 import '../../dummy_data/dummy_objects.dart';
 
@@ -32,6 +33,7 @@ class TvWatchlistEventFake extends Fake implements TvWatchlistEvent {}
 
 class TvWatchlistStateFake extends Fake implements TvWatchlistState {}
 
+@GenerateMocks([TvDetailBloc])
 void main() {
   late MockTvDetailBloc mockTvDetailBloc;
   late MockTvRecommendationBloc mockTvRecommendationBloc;

@@ -2,6 +2,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/annotations.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:movie/presentation/bloc/movie_detail/movie_detail_bloc.dart';
 import 'package:movie/presentation/bloc/movie_recommendation/movie_recommendation_bloc.dart';
@@ -35,6 +36,7 @@ class MovieWatchlistEventFake extends Fake implements MovieWatchlistEvent {}
 
 class MovieWatchlistStateFake extends Fake implements MovieWatchlistState {}
 
+@GenerateMocks([MovieDetailBloc])
 void main() {
   late MockMovieDetailBloc mockMovieDetailBloc;
   late MockMovieRecommendationBloc mockMovieRecommendationBloc;

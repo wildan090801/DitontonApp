@@ -2,6 +2,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/annotations.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:movie/presentation/bloc/movies_top_rated/movie_top_rated_bloc.dart';
 import 'package:movie/presentation/pages/top_rated_movies_page.dart';
@@ -16,6 +17,7 @@ class MovieTopRatedEventFake extends Fake implements MovieTopRatedEvent {}
 
 class MovieTopRatedStateFake extends Fake implements MovieTopRatedState {}
 
+@GenerateMocks([MovieTopRatedBloc])
 void main() {
   late MockMovieTopRatedBloc mockMovieTopRatedBloc;
 

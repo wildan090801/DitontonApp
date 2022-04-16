@@ -2,6 +2,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/annotations.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:movie/presentation/bloc/movies_popular/movie_popular_bloc.dart';
 import 'package:movie/presentation/pages/popular_movies_page.dart';
@@ -16,6 +17,7 @@ class MoviePopularEventFake extends Fake implements MoviePopularEvent {}
 
 class MoviePopularStateFake extends Fake implements MoviePopularState {}
 
+@GenerateMocks([MoviePopularBloc])
 void main() {
   late MockMoviePopularBloc mockMoviePopularBloc;
 

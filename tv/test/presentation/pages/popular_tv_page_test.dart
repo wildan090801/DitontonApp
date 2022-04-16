@@ -2,6 +2,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/annotations.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:tv/presentation/bloc/tv_popular/tv_popular_bloc.dart';
 import 'package:tv/presentation/pages/popular_tv_page.dart';
@@ -15,6 +16,7 @@ class TvPopularEventFake extends Fake implements TvPopularEvent {}
 
 class TvPopularStateFake extends Fake implements TvPopularState {}
 
+@GenerateMocks([TvPopularBloc])
 void main() {
   late MockTvPopularBloc mockTvPopularBloc;
 
